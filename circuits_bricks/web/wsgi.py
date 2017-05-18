@@ -44,7 +44,7 @@ class WSGIApplication(Application):
         
         response.prepare()
         headers = [(k, v if isinstance(v, str) else str(v)) \
-                    for k, v in response.headers.items()]
+                    for k, v in list(response.headers.items())]
 #         if response.status == 302:
 #             response.body = ""
         response.sync.result = (response.status, headers, response.body)

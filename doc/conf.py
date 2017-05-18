@@ -43,8 +43,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Circuits Bricks'
-copyright = u'2012, Michael N. Lipp'
+project = 'Circuits Bricks'
+copyright = '2012, Michael N. Lipp'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -181,8 +181,8 @@ htmlhelp_basename = 'CircuitsBricksdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'CircuitsBricks.tex', u'Circuits Bricks Documentation',
-   u'Michael N. Lipp', 'manual'),
+  ('index', 'CircuitsBricks.tex', 'Circuits Bricks Documentation',
+   'Michael N. Lipp', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -214,8 +214,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'circuitsbricks', u'Circuits Bricks Documentation',
-     [u'Michael N. Lipp'], 1)
+    ('index', 'circuitsbricks', 'Circuits Bricks Documentation',
+     ['Michael N. Lipp'], 1)
 ]
 
 

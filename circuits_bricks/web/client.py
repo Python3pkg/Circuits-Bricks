@@ -10,7 +10,7 @@ from circuits.core.events import Event
 try:
     from urllib.parse import urlparse
 except ImportError:
-    from urlparse import urlparse
+    from urllib.parse import urlparse
 
 from errno import ETIMEDOUT
 from collections import deque
@@ -97,9 +97,9 @@ class Client(BaseComponent):
         resource = p.path
         if p.query:
             resource += "?" + p.query
-        headers = Headers([(k, v) for k, v in headers.items()])
+        headers = Headers([(k, v) for k, v in list(headers.items())])
         # Clients MUST include Host header in HTTP/1.1 requests (RFC 2616)
-        if not headers.has_key("Host"):
+        if "Host" not in headers:
             headers["Host"] = self._host \
                 + (":" + str(self._port)) if self._port else ""
         command = "%s %s HTTP/1.1" % (method, resource)

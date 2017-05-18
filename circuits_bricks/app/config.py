@@ -13,7 +13,7 @@ import os
 try:
     from configparser import ConfigParser, SafeConfigParser
 except ImportError:
-    from ConfigParser import ConfigParser, SafeConfigParser
+    from configparser import ConfigParser, SafeConfigParser
 
 
 class config_value(Event):
@@ -123,7 +123,7 @@ class Configuration(BaseComponent):
         for section in initial_config:
             if not self._config.has_section(section):
                 self._config.add_section(section)
-                for option, value in initial_config[section].items():
+                for option, value in list(initial_config[section].items()):
                     if not self._config.has_option(section, option):
                         self._config.set(section, option, str(value))
                         modified = True
